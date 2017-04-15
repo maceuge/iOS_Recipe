@@ -17,9 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // Retoque de apariencia del NavBar, color de fondo y de texto
         UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         UINavigationBar.appearance().tintColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
         
+        // si me permite asignar la fuente a barFont lo aplica a NavBar
         if let barFont = UIFont(name: "Avenir-Light", size: 19.0) {
             UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1),
                                                                  NSFontAttributeName: barFont]

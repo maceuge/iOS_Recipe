@@ -23,7 +23,7 @@ class ReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let blurEfect = UIBlurEffect(style: .dark)
+        let blurEfect = UIBlurEffect(style: .regular)
         let blurEfectView = UIVisualEffectView(effect: blurEfect)
             blurEfectView.frame = view.bounds
         backgroundImageView.addSubview(blurEfectView)
@@ -52,13 +52,13 @@ class ReviewViewController: UIViewController {
         
         // una de las mejores formas para animar los botones sin tener que tocar el delay
         
-        UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: [], animations: {
+        UIView.animate(withDuration: 0.2, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: [], animations: {
             self.firstButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: { (success) in
-            UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: [], animations: {
+            UIView.animate(withDuration: 0.2, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: [], animations: {
                 self.secondButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             }, completion: { (success) in
-                UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: [], animations: {
+                UIView.animate(withDuration: 0.2, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: [], animations: {
                     self.thirdButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                 }, completion: nil)
             })

@@ -18,7 +18,7 @@ class Recipe: NSObject {
     var steps : [String]!
 //    var isFavorite: Bool = false
     
-    var rating: String = "close"
+    var rating: String = "cool"
     
     
     init(name : String, image : UIImage, time : Int, ingr: [String], steps: [String]) {

@@ -70,6 +70,7 @@ class ViewController: UITableViewController {
                         steps: ["Pelar los elementos", "Sofreir las patatas y cebollas", "Meterlo en la oya"])
         recipes.append(recipe)
         
+        
     }
     
 
@@ -117,6 +118,7 @@ class ViewController: UITableViewController {
     }
     
     
+    // funcion borrar una fila de la tabla
 //    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
 //        
 //        if editingStyle == .delete {
@@ -145,21 +147,17 @@ class ViewController: UITableViewController {
         //Borrar
         
         let deleteAction = UITableViewRowAction (style: .destructive, title: "Delete") { (action, indexPath) in
-            
             self.recipes.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
-            
         }
         
-        
-        
         return [shareAction, deleteAction]
-        
     }
+    
+  
     
     
     // Metodos de UITableDelegate
-    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
